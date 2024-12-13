@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Number Tabs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs-container">
+        <div class="tab" id="tab-1">1</div>
+        <div class="tab" id="tab-2">2</div>
+        <div class="tab" id="tab-3">3</div>
+        <div class="tab" id="tab-4">4</div>
+        <div class="tab" id="tab-5">5</div>
+        <div class="tab" id="tab-6">6</div>
+        <div class="tab" id="tab-7">7</div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active')); // Remove 'active' class from all tabs
+                tab.classList.add('active'); // Add 'active' class to the clicked tab
+            });
+        });
+    </script>
+</body>
+</html>
